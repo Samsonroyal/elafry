@@ -28,6 +28,13 @@ def build():
         '--onefile',          # Single executable
         '--clean',
         f'--add-data=logo.png{separator}.',
+        '--hidden-import=PyQt6.sip',
+        '--hidden-import=PyQt6.QtCore',
+        '--hidden-import=PyQt6.QtGui',
+        '--hidden-import=PyQt6.QtWidgets',
+        '--hidden-import=PyQt6.QtWebEngineWidgets',
+        '--collect-all=PyQt6',
+        '--collect-all=PyQt6-WebEngine',
     ]
 
     # Icon handling

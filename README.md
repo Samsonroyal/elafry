@@ -50,6 +50,16 @@ You can build a standalone executable for your current platform (Windows, macOS,
 
 > **Note:** On Windows, the script will automatically convert `logo.png` to `logo.ico` if you have `Pillow` installed.
 
+### Creating a Windows Installer (Optional)
+
+If you want to create a professional `setup.exe` installer instead of just a standalone file:
+
+1. Download and install [Inno Setup](https://jrsoftware.org/isdl.php).
+2. Build the project executable first (see above).
+3. Open `setup.iss` in Inno Setup.
+4. Click **Build** > **Compile**.
+5. The installer will be generated in the `installer/` folder.
+
 ### Cross-Platform Automated Builds
 
 This project includes a **GitHub Actions** workflow that automatically builds binaries for Windows, macOS, and Linux whenever you push changes or create a release. 
