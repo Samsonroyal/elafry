@@ -36,17 +36,24 @@
 
 ### Building the Executable
 
-To create a standalone Windows executable:
+You can build a standalone executable for your current platform (Windows, macOS, or Linux).
 
-1. Install PyInstaller:
+1. Ensure dependencies are installed:
    ```bash
-   pip install pyinstaller
+   pip install -r requirements.txt
    ```
 2. Run the build script:
    ```bash
-   build.bat
+   python build_binaries.py
    ```
-3. The application will be found in `dist/Elafry/Elafry.exe`.
+3. The executable will be found in the `dist` folder (e.g., `dist/Elafrý.exe` on Windows).
+
+> **Note:** On Windows, the script will automatically convert `logo.png` to `logo.ico` if you have `Pillow` installed.
+
+### Cross-Platform Automated Builds
+
+This project includes a **GitHub Actions** workflow that automatically builds binaries for Windows, macOS, and Linux whenever you push changes or create a release. 
+Check the **Actions** tab or **Releases** page on GitHub to download the latest builds.
 
 ## License
 
