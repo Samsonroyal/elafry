@@ -55,6 +55,11 @@ You can build a standalone executable for your current platform (Windows, macOS,
 This project includes a **GitHub Actions** workflow that automatically builds binaries for Windows, macOS, and Linux whenever you push changes or create a release. 
 Check the **Actions** tab or **Releases** page on GitHub to download the latest builds.
 
+## Documentation
+
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Architecture Overview](ARCHITECTURE.md)
+
 ## License
 
 MIT License. Free and Open Source.
