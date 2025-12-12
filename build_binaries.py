@@ -52,7 +52,7 @@ def build():
 
     # Icon handling
     if sys.platform == 'win32':
-        args.append('--icon=logo.png')
+        args.append('--icon=logo.ico')
     elif sys.platform == 'darwin':
         # On Mac, we'd ideally want an .icns file, but PyInstaller might warn/skip if png is passed.
         # We'll pass it and see.
