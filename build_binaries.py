@@ -27,14 +27,27 @@ def build():
         '--windowed',         # No console window
         '--onefile',          # Single executable
         '--clean',
+        '--noupx',            # UPX can sometimes break Qt apps or cause false positives
         f'--add-data=logo.png{separator}.',
+        
+        # Explicit hidden imports to ensure functionality without "collect-all"
         '--hidden-import=PyQt6.sip',
         '--hidden-import=PyQt6.QtCore',
         '--hidden-import=PyQt6.QtGui',
         '--hidden-import=PyQt6.QtWidgets',
         '--hidden-import=PyQt6.QtWebEngineWidgets',
-        '--collect-all=PyQt6',
-        '--collect-all=PyQt6-WebEngine',
+        '--hidden-import=PyQt6.QtWebEngineCore',
+        
+        # Exclude unnecessary standard library modules to save space
+        '--exclude-module=tkinter',
+        '--exclude-module=matplotlib',
+        '--exclude-module=numpy',
+        '--exclude-module=pandas',
+        '--exclude-module=unittest',
+        '--exclude-module=email',
+        '--exclude-module=http',
+        '--exclude-module=xml',
+        '--exclude-module=pydoc',
     ]
 
     # Icon handling
